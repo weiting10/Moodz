@@ -20,8 +20,8 @@ struct ContentView: View {
                             VStack(alignment: .leading, spacing: 2) {
                                 Text(mood.title)
                                     .font(.title3)
-                                // long date / short time, e.g. "October 24, 2024 at 7:01 AM"
-                                Text(mood.timestamp.formatted(date: .long, time: .shortened))
+                                // long date / 24-hour time, e.g. "October 24, 2024 at 07:01"
+                                Text(mood.timestamp.moodString)
                                     .font(.caption2)
                                     .foregroundStyle(.secondary)
                             }
@@ -47,6 +47,7 @@ struct ContentView: View {
                 ComposeView()
             }
         }
+        .tint(.blue)
     }
 
     private func delete(at offsets: IndexSet) {

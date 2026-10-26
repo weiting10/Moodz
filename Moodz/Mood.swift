@@ -21,3 +21,13 @@ final class Mood {
         self.moodValue = mood.rawValue
     }
 }
+
+extension Date {
+    /// Long date, 24-hour short time, e.g. "October 24, 2024 at 07:01"
+    var moodString: String {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.dateFormat = "MMMM d, yyyy 'at' HH:mm"
+        return formatter.string(from: self)
+    }
+}

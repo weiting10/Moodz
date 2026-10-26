@@ -13,25 +13,24 @@ struct ComposeView: View {
         // The Save button sits outside the Form, so it stays put while the form scrolls.
         VStack(spacing: 0) {
             Form {
-                Section {
-                    Picker("Mood", selection: $mood) {
-                        ForEach(MoodType.allCases) { type in
-                            Text("\(type.emoji()) \(type.description())").tag(type)
-                        }
-                    }
-                    .pickerStyle(.wheel)
-                } header: {
-                    Text("\(mood.emoji()) \(mood.description())")
-                        .font(.headline)
-                }
-
                 Section("Title") {
                     TextField("What's on your mind?", text: $title)
                 }
 
-                Section("Notes") {
+                Section("Text") {
                     TextEditor(text: $text)
-                        .frame(minHeight: 120)
+                        .frame(minHeight: 300)
+                }
+
+                Section {
+                    Picker("Mood", selection: $mood) {
+                        ForEach(MoodType.allCases) { type in
+                            Text(type.emoji()).tag(type)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                } header: {
+                    Text("Mood")
                 }
             }
 
@@ -40,7 +39,7 @@ struct ComposeView: View {
             } label: {
                 Text("Save")
                     .font(.headline)
-                    .frame(maxWidth: .infinity)
+                    .frame(maxWidth: 80)
                     .padding(.vertical, 6)
             }
             .buttonStyle(.borderedProminent)

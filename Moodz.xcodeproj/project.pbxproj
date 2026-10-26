@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		77739EE8308FE1E9008BACE2 /* Moodz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moodz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		77739EE8308FE1E9008BACE2 /* Moodz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Moodz.app; path = "/Users/wtan10/Desktop/wtan10-hw-6/Moodz/build/Debug/Moodz.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -33,16 +33,7 @@
 			isa = PBXGroup;
 			children = (
 				77739EEA308FE1E9008BACE2 /* Moodz */,
-				77739EE9308FE1E9008BACE2 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		77739EE9308FE1E9008BACE2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				77739EE8308FE1E9008BACE2 /* Moodz.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,7 +86,7 @@
 			mainGroup = 77739EDF308FE1E9008BACE2;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 77739EE9308FE1E9008BACE2 /* Products */;
+			productRefGroup = 77739EDF308FE1E9008BACE2;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (

@@ -1,11 +1,5 @@
-//
-//  MoodzApp.swift
-//  Moodz
-//
-//  Created by Tan, Weiting on 10/26/26.
-//
-
 import SwiftUI
+import SwiftData
 
 @main
 struct MoodzApp: App {
@@ -13,5 +7,6 @@ struct MoodzApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: Mood.self)
     }
 }

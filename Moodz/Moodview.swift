@@ -5,10 +5,6 @@ struct MoodView: View {
 
     var body: some View {
         VStack(spacing: 16) {
-            // Card: a ZStack clipped with .mask.
-            // To use a real image as the background, add an image to Assets
-            // (e.g. "moodBackground") and replace the Rectangle with
-            // Image("moodBackground").resizable().scaledToFill()
             ZStack {
                 Rectangle()
                     .fill(.quaternary)

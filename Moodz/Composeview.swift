@@ -30,7 +30,7 @@ struct ComposeView: View {
                     }
                     .pickerStyle(.segmented)
                 } header: {
-                    Text("Mood")
+                    Text("Mood · \(mood.description())")
                 }
             }
 
@@ -39,13 +39,13 @@ struct ComposeView: View {
             } label: {
                 Text("Save")
                     .font(.headline)
-                    .frame(maxWidth: 80)
+                    .padding(.horizontal, 30)
                     .padding(.vertical, 6)
             }
             .buttonStyle(.borderedProminent)
             .disabled(title.trimmingCharacters(in: .whitespaces).isEmpty)
             .padding()
-            .background(.bar)
+            .background(Color(.systemGroupedBackground))
         }
     }
 
